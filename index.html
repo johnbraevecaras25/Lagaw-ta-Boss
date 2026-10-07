@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Lagaw 💗</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(
+        135deg,
+        #ffe4ec,
+        #fff7fa,
+        #eee4ff
+    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:14px;
+    color:#4b2b36;
+}
+
+.container{
+    width:min(100%,760px);
+    background:white;
+    border-radius:24px;
+    padding:24px 18px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+h1,
+h2{
+    color:#d6336c;
+    margin-top:8px;
+}
+
+p{
+    color:#76535f;
+    line-height:1.6;
+}
+
+.big{
+    font-size:54px;
+}
+
+.hidden{
+    display:none;
+}
+
+button{
+    border:none;
+    padding:14px 20px;
+    min-height:48px;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.18s ease;
+    touch-action:manipulation;
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+.yes,
+.choice{
+    background:#ff5c8a;
+    color:white;
+}
+
+.back{
+    background:#eeeeee;
+    color:#555;
+    margin-top:18px;
+}
+
+
+/* =========================
+INTRO BUTTON AREA
+========================= */
+
+.intro-buttons{
+    position:relative;
+    height:150px;
+    width:min(100%,430px);
+    margin:22px auto 0;
+    overflow:hidden;
+}
+
+#yesBtn{
+    position:absolute;
+    left:23%;
+    top:18px;
+    transform:translateX(-50%);
+    z-index:2;
+}
+
+#noBtn{
+    position:absolute;
+    left:76%;
+    top:18px;
+    transform:translateX(-50%);
+    background:#eeeeee;
+    color:#555;
+    z-index:3;
+}
+
+
+/* REAL NO BUTTON */
+
+.real-no{
+    background:none;
+    color:#8f8f8f;
+    text-decoration:underline;
+    font-size:13px;
+    padding:8px 10px;
+    min-height:38px;
+}
+
+.real-no:hover{
+    transform:none;
+}
+
+
+/* =========================
+CARDS
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:22px;
+}
+
+.card{
+    background:#fff6f9;
+    border:2px solid #ffd4e1;
+    border-radius:18px;
+    padding:18px 14px;
+    cursor:pointer;
+    transition:.18s ease;
+    min-width:0;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    background:#ffeaf1;
+}
+
+.card:active{
+    transform:scale(.98);
+}
+
+.icon{
+    font-size:38px;
+}
+
+.card h3{
+    color:#c2255c;
+    margin:8px 0 4px;
+}
+
+.card p{
+    font-size:14px;
+    margin:0;
+}
+
+
+/* =========================
+CHOICES
+========================= */
+
+.choices{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:22px;
+}
+
+
+/* =========================
+SUMMARY
+========================= */
+
+.summary{
+    background:#fff1f5;
+    padding:18px;
+    border-radius:18px;
+    max-width:500px;
+    margin:20px auto;
+    text-align:left;
+    line-height:2;
+    word-break:break-word;
+}
+
+.share-btn{
+    background:#7c4dff;
+    color:white;
+    margin-top:10px;
+}
+
+.memory-message{
+    background:#fff7fa;
+    border:2px dashed #ffc4d6;
+    border-radius:18px;
+    padding:18px;
+    margin:20px auto;
+    max-width:520px;
+}
+
+.memory-message h2{
+    margin-bottom:8px;
+}
+
+#trollMessage{
+    min-height:26px;
+    font-weight:600;
+    color:#b44b72;
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:650px){
+
+    body{
+        align-items:flex-start;
+        padding:12px;
+    }
+
+    .container{
+        margin-top:12px;
+        padding:22px 14px 26px;
+        border-radius:20px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        text-align:left;
+        display:grid;
+        grid-template-columns:50px 1fr;
+        grid-template-rows:auto auto;
+        column-gap:12px;
+        align-items:center;
+    }
+
+    .card .icon{
+        grid-row:1 / span 2;
+        text-align:center;
+    }
+
+    .card h3,
+    .card p{
+        margin-left:0;
+    }
+
+    #yesBtn{
+        left:28%;
+    }
+
+    #noBtn{
+        left:72%;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =========================
+INTRO SCREEN
+========================= -->
+
+<div id="introScreen">
+
+    <div class="big">
+        
+    </div>
+
+    <h1>
+        Surebola pindoton mo en. 
+    </h1>
+
+    <p>
+        
+        <br>
+    
+    </p>
+
+    <h2>
+        Lagaw ta Pre? 💗
+    </h2>
+
+
+    <div
+        class="intro-buttons"
+        id="buttonArea"
+    >
+
+        <button
+            id="yesBtn"
+            class="yes"
+            onclick="acceptDate()"
+        >
+            G na ehhh 💕
+        </button>
+
+
+        <button id="noBtn">
+
+            Indi 😆
+
+        </button>
+
+    </div>
+
+
+    <p id="trollMessage">
+
+        Pili lang 😌
+
+    </p>
+
+
+    <button
+        class="real-no"
+        onclick="realNo()"
+    >
+
+        no gid :< 
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+REAL NO SCREEN
+========================= -->
+
+<div
+    id="noScreen"
+    class="hidden"
+>
+
+    <div class="big">
+        🌷
+    </div>
+
+    <h2>
+        Okay lang gid 😌
+    </h2>
+
+    <p>
+
+       
+
+        <br><br>
+
+        Basi sa sunod na lang
+        kung gusto mo kag free ka. 💗
+
+    </p>
+
+
+    <button
+        class="back"
+        onclick="restart()"
+    >
+
+        Balik
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+CATEGORY SCREEN
+========================= -->
+
+<div
+    id="categoryScreen"
+    class="hidden"
+>
+
+    <div class="big">
+        🥰
+    </div>
+
+    <h1>
+        Yehey! Sige, Date Ta 😆💗
+    </h1>
+
+    <p>
+        Ano gusto mo himuon?
+    </p>
+
+
+    <div class="grid">
+
+
+        <div
+            class="card"
+            onclick="showPlaces('cine')"
+        >
+
+            <div class="icon">
+                🎬
+            </div>
+
+            <h3>
+                Cine Ta
+            </h3>
+
+            <p>
+                Movie kag popcorn.
+            </p>
+
+        </div>
+
+
+        <div
+            class="card"
+            onclick="showPlaces('nature')"
+        >
+
+            <div class="icon">
+                🌿
+            </div>
+
+            <h3>
+                Nature Ta
+            </h3>
+
+            <p>
+                Lagaw kag fresh air.
+            </p>
+
+        </div>
+
+
+        <div
+            class="card"
+            onclick="showPlaces('food')"
+        >
+
+            <div class="icon">
+                ☕
+            </div>
+
+            <h3>
+                Cafe / Kaon Ta
+            </h3>
+
+            <p>
+                Kape kag simple nga kaon.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+PLACE SCREEN
+========================= -->
+
+<div
+    id="placeScreen"
+    class="hidden"
+>
+
+    <h2 id="placeTitle"></h2>
+
+    <p>
+        Pili ka diin mo gusto 😌
+    </p>
+
+    <div
+        id="placeGrid"
+        class="grid"
+    >
+    </div>
+
+
+    <button
+        class="back"
+        onclick="backCategory()"
+    >
+
+        ← Balik
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+DAY SCREEN
+========================= -->
+
+<div
+    id="dayScreen"
+    class="hidden"
+>
+
+    <div class="big">
+        📅
+    </div>
+
+    <h2>
+        San-o Ka Free?
+    </h2>
+
+    <p>
+        Pili ka adlaw.
+    </p>
+
+
+    <div class="choices">
+
+        <button
+            class="choice"
+            onclick="selectDay('Sabado')"
+        >
+
+            Sabado 💗
+
+        </button>
+
+
+        <button
+            class="choice"
+            onclick="selectDay('Domingo')"
+        >
+
+            Domingo 🌷
+
+        </button>
+
+    </div>
+
+
+    <button
+        class="back"
+        onclick="backPlaces()"
+    >
+
+        ← Balik
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+TIME SCREEN
+========================= -->
+
+<div
+    id="timeScreen"
+    class="hidden"
+>
+
+    <div class="big">
+        ⏰
+    </div>
+
+    <h2>
+        Ano Nga Oras?
+    </h2>
+
+    <p>
+        Pili kung ano mas convenient sa imo.
+    </p>
+
+
+    <div class="choices">
+
+        <button
+            class="choice"
+            onclick="selectTime('Aga')"
+        >
+
+            🌤️ Aga
+
+        </button>
+
+
+        <button
+            class="choice"
+            onclick="selectTime('Hapon')"
+        >
+
+            ☀️ Hapon
+
+        </button>
+
+
+        <button
+            class="choice"
+            onclick="selectTime('Gab-i')"
+        >
+
+            🌙 Gab-i
+
+        </button>
+
+    </div>
+
+
+    <button
+        class="back"
+        onclick="backDay()"
+    >
+
+        ← Balik
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+FINAL SCREEN
+========================= -->
+
+<div
+    id="finalScreen"
+    class="hidden"
+>
+
+    <div class="big">
+        🥰🌷
+    </div>
+
+    <h1>
+        Sureboll na ha! Mandam ka lang. 😆💗
+    </h1>
+
+
+    <div class="summary">
+
+        💕
+        <strong>Date:</strong>
+        <span id="summaryCategory"></span>
+
+        <br>
+
+        📍
+        <strong>Diin:</strong>
+        <span id="summaryPlace"></span>
+
+        <br>
+
+        📅
+        <strong>Adlaw:</strong>
+        <span id="summaryDay"></span>
+
+        <br>
+
+        ⏰
+        <strong>Oras:</strong>
+        <span id="summaryTime"></span>
+
+    </div>
+
+
+    <div class="memory-message">
+
+        <h2>
+            Ariiii 😆
+        </h2>
+
+        <p>
+            Dugang naman ni sa aton memories
+            nga mag-upod ta liwat eh??? 💗
+        </p>
+
+        <p>
+            Excited nako part.
+            <br>
+             🌷💕
+        </p>
+
+    </div>
+
+
+    <button
+        class="share-btn"
+        onclick="shareAnswer()"
+    >
+
+        💌 I-send ang Answer
+
+    </button>
+
+
+    <br>
+
+
+    <button
+        class="back"
+        onclick="restart()"
+    >
+
+        Pili Liwat
+
+    </button>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+SELECTED ANSWERS
+========================= */
+
+let selectedCategory = "";
+
+let selectedPlace = "";
+
+let selectedDay = "";
+
+let selectedTime = "";
+
+
+
+/* =========================
+DATE PLACES
+EDIT MO LANG DITO
+========================= */
+
+const places = {
+
+
+    cine:[
+
+        {
+
+            name:
+            "KCC Cinema",
+
+            description:
+            "Movie kag popcorn ta 🎬🍿"
+
+        },
+
+
+        {
+
+            name:
+            "Movie + Kaon",
+
+            description:
+            "Cine anay, kaon pagkatapos 😆"
+
+        }
+
+    ],
+
+
+
+    nature:[
+
+        {
+
+            name:
+            "Rizal Park",
+
+            description:
+            "Simple lagaw kag storyahanay 🌿"
+
+        },
+
+
+        {
+
+            name:
+            "Lake Sebu",
+
+            description:
+            "Road trip kag nature view 🌄"
+
+        },
+
+
+        {
+
+            name:
+            "Siok Falls",
+
+            description:
+            "Nature trip ta 💦"
+
+        }
+
+    ],
+
+
+
+    food:[
+
+        {
+
+            name:
+            "KOROA Coffee",
+
+            description:
+            "Simple coffee date ☕"
+
+        },
+
+
+        {
+
+            name:
+            "Rx Daily Dose Cafe",
+
+            description:
+            "Kape kag chikahan 😌"
+
+        },
+
+
+        {
+
+            name:
+            "Unfnshd Cafe",
+
+            description:
+            "Chill cafe date 🌷"
+
+        },
+
+
+        {
+
+            name:
+            "Kalipay Cafe",
+
+            description:
+            "Simple coffee bonding ☕"
+
+        },
+
+
+        {
+
+            name:
+            "Merc's Cafe",
+
+            description:
+            "Tambay kag storyahanay 💕"
+
+        },
+
+
+        {
+
+            name:
+            "24 Chicken Marbel",
+
+            description:
+            "Chicken food trip 🍗"
+
+        },
+
+
+        {
+
+            name:
+            "BABS Resto",
+
+            description:
+            "Simple kaon lang ta 😋"
+
+        },
+
+
+        {
+
+            name:
+            "Ikaw Pili",
+
+            description:
+            "Ikaw bahala diin mo gusto 😆"
+
+        }
+
+    ]
+
+};
+
+
+
+/* =========================
+TROLL NO BUTTON
+========================= */
+
+const noBtn =
+document.getElementById("noBtn");
+
+
+const buttonArea =
+document.getElementById("buttonArea");
+
+
+const trollMessage =
+document.getElementById("trollMessage");
+
+
+
+const trollTexts = [
+
+    "Dakpa 😆",
+
+    "Try lang di ka daan pa lugi 😂",
+
+    "Lagsa Ennn!!! 😭",
+
+    "Oo nalang bala pinduta 👀",
+
+    "Yugs di ka gid haw?? "
+
+];
+
+
+let trollCount = 0;
+
+
+
+function moveNo(){
+
+
+    const area =
+    buttonArea.getBoundingClientRect();
+
+
+    const button =
+    noBtn.getBoundingClientRect();
+
+
+
+    const maxX =
+    Math.max(
+        0,
+        area.width - button.width
+    );
+
+
+    const maxY =
+    Math.max(
+        0,
+        area.height - button.height
+    );
+
+
+
+    const x =
+    Math.random() * maxX;
+
+
+    const y =
+    Math.random() * maxY;
+
+
+
+    noBtn.style.left =
+    x + "px";
+
+
+    noBtn.style.top =
+    y + "px";
+
+
+    noBtn.style.transform =
+    "none";
+
+
+
+    trollMessage.textContent =
+    trollTexts[
+        trollCount %
+        trollTexts.length
+    ];
+
+
+    trollCount++;
+
+}
+
+
+
+/* DESKTOP */
+
+noBtn.addEventListener(
+
+    "mouseenter",
+
+    moveNo
+
+);
+
+
+
+/* PHONE */
+
+noBtn.addEventListener(
+
+    "pointerdown",
+
+    function(event){
+
+        event.preventDefault();
+
+        moveNo();
+
+    }
+
+);
+
+
+
+noBtn.addEventListener(
+
+    "touchstart",
+
+    function(event){
+
+        event.preventDefault();
+
+        moveNo();
+
+    },
+
+    {
+        passive:false
+    }
+
+);
+
+
+
+/* =========================
+YES
+========================= */
+
+function acceptDate(){
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "categoryScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+
+
+/* =========================
+REAL NO
+========================= */
+
+function realNo(){
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "noScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+
+
+/* =========================
+SHOW PLACES
+========================= */
+
+function showPlaces(category){
+
+
+    selectedCategory =
+    category;
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "placeScreen"
+    )
+    .classList
+    .remove("hidden");
+
+
+
+    const grid =
+    document
+    .getElementById(
+        "placeGrid"
+    );
+
+
+    grid.innerHTML =
+    "";
+
+
+
+    if(
+        category === "cine"
+    ){
+
+        document
+        .getElementById(
+            "placeTitle"
+        )
+        .textContent =
+        "🎬 Pili Ka Cine Date";
+
+    }
+
+
+
+    if(
+        category === "nature"
+    ){
+
+        document
+        .getElementById(
+            "placeTitle"
+        )
+        .textContent =
+        "🌿 Pili Ka Nature Date";
+
+    }
+
+
+
+    if(
+        category === "food"
+    ){
+
+        document
+        .getElementById(
+            "placeTitle"
+        )
+        .textContent =
+        "☕ Pili Ka Cafe Ukon Kainan";
+
+    }
+
+
+
+    places[category]
+    .forEach(
+
+        place => {
+
+
+            const card =
+            document
+            .createElement(
+                "div"
+            );
+
+
+            card.className =
+            "card";
+
+
+
+            const icon =
+
+            category === "food"
+
+            ? "☕"
+
+            : category === "nature"
+
+            ? "🌿"
+
+            : "🎬";
+
+
+
+            card.innerHTML = `
+
+                <div class="icon">
+
+                    ${icon}
+
+                </div>
+
+
+                <h3>
+
+                    ${place.name}
+
+                </h3>
+
+
+                <p>
+
+                    ${place.description}
+
+                </p>
+
+            `;
+
+
+
+            card
+            .addEventListener(
+
+                "click",
+
+                function(){
+
+                    choosePlace(
+                        place.name
+                    );
+
+                }
+
+            );
+
+
+
+            grid
+            .appendChild(
+                card
+            );
+
+        }
+
+    );
+
+}
+
+
+
+/* =========================
+CHOOSE PLACE
+========================= */
+
+function choosePlace(place){
+
+
+    selectedPlace =
+    place;
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "dayScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+
+
+/* =========================
+SELECT DAY
+========================= */
+
+function selectDay(day){
+
+
+    selectedDay =
+    day;
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "timeScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+
+
+/* =========================
+SELECT TIME
+========================= */
+
+function selectTime(time){
+
+
+    selectedTime =
+    time;
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "finalScreen"
+    )
+    .classList
+    .remove("hidden");
+
+
+    showSummary();
+
+}
+
+
+
+/* =========================
+CATEGORY NAME
+========================= */
+
+function getCategoryName(){
+
+    if(selectedCategory === "cine"){
+        return "Cine Date 🎬";
+    }
+
+    if(selectedCategory === "nature"){
+        return "Nature Date 🌿";
+    }
+
+    if(selectedCategory === "food"){
+        return "Cafe / Food Date ☕";
+    }
+
+    return "";
+}
+
+
+
+/* =========================
+SHOW SUMMARY
+========================= */
+
+function showSummary(){
+
+
+    document
+    .getElementById(
+        "summaryCategory"
+    )
+    .textContent =
+    getCategoryName();
+
+
+
+    document
+    .getElementById(
+        "summaryPlace"
+    )
+    .textContent =
+    selectedPlace;
+
+
+
+    document
+    .getElementById(
+        "summaryDay"
+    )
+    .textContent =
+    selectedDay;
+
+
+
+    document
+    .getElementById(
+        "summaryTime"
+    )
+    .textContent =
+    selectedTime;
+
+}
+
+
+
+/* =========================
+SHARE ANSWER
+========================= */
+
+async function shareAnswer(){
+
+
+    const message =
+
+`Yehey 😆💗 Amo ni napilian ko:
+
+💕 Date: ${getCategoryName()}
+
+📍 Diin: ${selectedPlace}
+
+📅 Adlaw: ${selectedDay}
+
+⏰ Oras: ${selectedTime}
+
+
+Ariiii 😆
+
+Dugang naman ni sa aton memories
+nga mag-upod ta liwat eh??? 💗🌷💕`;
+
+
+
+    if(
+        navigator.share
+    ){
+
+
+        try{
+
+
+            await navigator.share({
+
+                title:
+                "Date Ta 💗",
+
+                text:
+                message
+
+            });
+
+
+        }
+
+
+        catch(error){
+
+
+            /*
+            Normal lang kung
+            i-cancel niya
+            ang share menu.
+            */
+
+
+        }
+
+    }
+
+
+    else{
+
+
+        alert(
+
+            message +
+
+            "\n\nScreenshot or copy mo ni kag send sa Messenger 😆"
+
+        );
+
+    }
+
+}
+
+
+
+/* =========================
+BACK TO CATEGORY
+========================= */
+
+function backCategory(){
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "categoryScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+
+
+/* =========================
+BACK TO PLACES
+========================= */
+
+function backPlaces(){
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "placeScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+
+
+/* =========================
+BACK TO DAY
+========================= */
+
+function backDay(){
+
+
+    hideAll();
+
+
+    document
+    .getElementById(
+        "dayScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+
+
+/* =========================
+HIDE ALL SCREENS
+========================= */
+
+function hideAll(){
+
+
+    const screens = [
+
+        "introScreen",
+
+        "noScreen",
+
+        "categoryScreen",
+
+        "placeScreen",
+
+        "dayScreen",
+
+        "timeScreen",
+
+        "finalScreen"
+
+    ];
+
+
+
+    screens.forEach(
+
+        id => {
+
+
+            document
+            .getElementById(id)
+            .classList
+            .add("hidden");
+
+        }
+
+    );
+
+}
+
+
+
+/* =========================
+RESTART
+========================= */
+
+function restart(){
+
+
+    selectedCategory =
+    "";
+
+
+    selectedPlace =
+    "";
+
+
+    selectedDay =
+    "";
+
+
+    selectedTime =
+    "";
+
+
+
+    trollCount =
+    0;
+
+
+
+    trollMessage
+    .textContent =
+    "Pili lang 😌";
+
+
+
+    noBtn.style.left =
+    "";
+
+
+    noBtn.style.top =
+    "";
+
+
+    noBtn.style.transform =
+    "";
+
+
+
+    hideAll();
+
+
+
+    document
+    .getElementById(
+        "introScreen"
+    )
+    .classList
+    .remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
